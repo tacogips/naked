@@ -13,7 +13,7 @@ Deadly simple template engine in Go
 - SO very fast
 
 ## example
-```
+```go
 // example
 tpl := Parse("http//wwww.com?aa=${AB_CD}&bb=${SOME}")
 
