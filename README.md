@@ -15,7 +15,7 @@ Deadly simple template engine in Go
 ## example
 ```go
 // example
-tpl := Parse("http//wwww.com?aa=${AB_CD}&bb=${SOME}")
+tpl := naked.Parse("http//wwww.com?aa=${AB_CD}&bb=${SOME}")
 
 r := tpl.Render(map[string]string{"AB_CD": "1234", "SOME": "ssss"})
 // r => "http//wwww.com?aa=1234&bb=ssss"
