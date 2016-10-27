@@ -1,5 +1,5 @@
 ## naked
-Deadly simple template engine in Go
+Deadly simple template engine written in Go
 
 - NO snippet
 - NO block
