@@ -76,14 +76,14 @@ func (t Template) Render(vars map[string]string) string {
 	for _, elem := range t.elems {
 		switch typedElem := elem.(type) {
 		case textElem:
-			b.Write([]byte(typedElem.text))
+			b.WriteString(typedElem.text)
 		case tagElem:
 			if v, ok := vars[typedElem.tag]; ok {
-				b.Write([]byte(v))
+				b.WriteString(v)
 			} else {
-				b.Write([]byte(t.openDelim))
-				b.Write([]byte(typedElem.tag))
-				b.Write([]byte(t.closeDelim))
+				b.WriteString(t.openDelim)
+				b.WriteString(typedElem.tag)
+				b.WriteString(t.closeDelim)
 			}
 		}
 	}
